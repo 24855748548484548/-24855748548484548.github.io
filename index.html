@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Giriş Formu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 30px;
+            border: 1px solid #ff0000;
+            border-radius: 5px;
+            background-color: #ff0000;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #f90000;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            color: #ff0000;
+            background-color: #007BFF;
+        }
+    </style>
+    <script type="text/javascript">
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if(username == 'admin2013' && password == '20132013') {
+                window.location.href = 'https://www.youtube.com/watch?v=SegaPbTyFrQ';
+                return false;
+            } else 
+                alert('Hatalı kullanıcı adı veya şifre!');
+                return false;
+            }
+        
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        <label for="username">Kullanıcı Adı:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Şifre:</label><br>
+        <input type="password" id="password" name="password"><br>
+        <input type="submit" value="Giriş Yap">
+    </form>
+</body>
+</html>
